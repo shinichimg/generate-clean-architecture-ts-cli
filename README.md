@@ -1,10 +1,11 @@
-# Generate Clean Architecture CLI
+# TypeScript Clean Architecture CLI
 
-## Overview
-- This project uses a command-line tool to automatically generate a specific folder structure for application code. The structure is designed to organize code in a clean and maintainable way.
+## Introduction
+Welcome to the **TypeScript Clean Architecture CLI**, a command-line utility designed to automate the generation of a well-structured folder layout for your application code. This tool facilitates the implementation of Clean Architecture principles by organizing your codebase into clearly defined layers, enhancing maintainability and scalability.
 
-## Folder Structure
-- The generated structure will follow this format:
+## Directory Layout
+Upon execution, the CLI will generate the following directory structure:
+
 ```bash
 core/
 ├── application/
@@ -26,30 +27,69 @@ core/
         └── your_file.api.ts  
 ```
 
+### Each layer serves a specific purpose:
+- **Application Layer**: Handles use cases and orchestrates interactions between layers.
+- **Domain Layer**: Encapsulates business logic through entities, repositories, and data transfer objects (DTOs).
+- **Infrastructure Layer**: Manages external dependencies, such as APIs, databases, and external services.
+
 ## Prerequisites
+Ensure you have the following installed on your machine:
+- Node.js version **16** or **higher**.
 
-Before installing, ensure you have the following:
+## Installation
+To set up the CLI, install the required dependencies using your preferred package manager:
 
-- **Node.js** version 16 or higher
-
-## Installing
-
-- To install the required packages, you can use either `yarn` or `npm`:
-
-### Using Yarn
+### Yarn
 ```bash
 yarn install
 ```
 
-### Using npm
+### Npm
 ```bash
 npm install
 ```
 
-## Usage
-
-- To generate the folder structure for a specific entity, run the following command:
-
+## How to Use
+Generating a new structure is simple. Execute the following command, replacing 'your_file' with the desired name for your entity:
 ```bash
 yarn generate:structure --name='your_file'
 ```
+This will automatically create the corresponding files within the specified folders.
+
+## Example
+Running the command:
+```bash
+yarn generate:structure --name='User'
+```
+Will create the following files:
+
+```bash
+core/
+├── application/
+│   └── controllers/
+│       └── user.controller.ts  
+│   └── services/
+│       └── user.service.ts  
+│     
+├── domain/
+│   └── entities/
+│       └── user.entity.ts  
+│   └── repositories/
+│       └── user.repository.ts  
+│   └── dtos/
+│       └── user.dto.ts  
+│     
+└── infrastructure/
+    └── apis/
+        └── user.api.ts  
+```
+Each file is a placeholder, ready to be filled with the logic and structure specific to your application.
+
+## Author
+phanhoangviet1004@gmail.com
+
+## Contributions
+Contributions are welcome! Feel free to open issues or submit pull requests to improve the tool.
+
+
+
