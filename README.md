@@ -12,9 +12,9 @@ core/
 │       └── your_file.service.ts  
 │     
 ├── domain/
-│   ├── entities/
+│   └── entities/
 │       └── your_file.entity.ts  
-│   ├── repositories/
+│   └── repositories/
 │       └── your_file.repository.ts  
 │   └── dtos/
 │       └── your_file.dto.ts  
