@@ -37,7 +37,7 @@ const generateStructure = (name) => {
     },
     {
       path: `infrastructure/apis/${name}.api.ts`,
-      content: `// ${name}.api.ts\n\nimport { Get${formattedName}sDto } from "@/core/domain/dtos/${name}.dto";\nimport { ${formattedName}Entity } from "@/core/domain/entities/${name}.entity";\nimport get from "lodash/get";\nimport baseInstance from "./base-instance.api";\nimport { ${formattedName}Repository } from "@/core/domain/repositories/${name}.repository";\n\nexport const ${camelCaseName}API: ${formattedName}Repository = {\n  get${formattedName}s: async (payload: Get${formattedName}sDto) => {\n    const ${camelCaseName}Response = await baseInstance.post<${formattedName}Entity[]>('/${name}s/get', payload);\n    return get(${camelCaseName}Response, "data", []);\n  },\n};\n`
+      content: `// ${name}.api.ts\n\nimport { Get${formattedName}sDto } from "@/core/domain/dtos/${name}.dto";\nimport { ${formattedName}Entity } from "@/core/domain/entities/${name}.entity";\nimport get from "lodash/get";\nimport axios from 'axios';\nimport { ${formattedName}Repository } from "@/core/domain/repositories/${name}.repository";\n\nexport const ${camelCaseName}API: ${formattedName}Repository = {\n  get${formattedName}s: async (payload: Get${formattedName}sDto) => {\n    const ${camelCaseName}Response = await axios.post<${formattedName}Entity[]>('/${name}s/get', payload);\n    return get(${camelCaseName}Response, "data", []);\n  },\n};\n`
     }
   ];
 

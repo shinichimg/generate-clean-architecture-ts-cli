@@ -26,9 +26,29 @@ core/
         └── your_file.api.ts  
 ```
 
+## Prerequisites
+
+Before installing, ensure you have the following:
+
+- **Node.js** version 16 or higher
+
+## Installing
+
+- To install the required packages, you can use either `yarn` or `npm`:
+
+### Using Yarn
+```bash
+yarn install
+```
+
+### Using npm
+```bash
+npm install
+```
+
 ## Usage
 
-To generate the folder structure for a specific entity, run the following command:
+- To generate the folder structure for a specific entity, run the following command:
 
 ```bash
 yarn generate:structure --name='your_file'
