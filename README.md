@@ -8,6 +8,8 @@ The generated structure will follow this format:
 ```bash
 core/
 ├── application/
+│   └── controllers/
+│       └── your_file.controller.ts  
 │   └── services/
 │       └── your_file.service.ts  
 │     
