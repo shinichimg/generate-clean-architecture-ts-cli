@@ -5,7 +5,15 @@ This project uses a command-line tool to automatically generate a specific folde
 
 ## Folder Structure
 The generated structure will follow this format:
-core/ ├── application/ │ └── services/ ├── domain/ │ ├── entities/ │ ├── repositories/ │ └── dtos/ └── infrastructure/ └── apis/
+core/
+├── application/
+│   └── services/
+├── domain/
+│   ├── entities/
+│   ├── repositories/
+│   └── dtos/
+└── infrastructure/
+    └── apis/
 
 ## Usage
 
