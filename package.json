@@ -1,8 +1,9 @@
 {
-  "name": "cli-tools",
+  "name": "generate-clean-architecture-ts-cli",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "author": "phanhoangviet1004@gmail.com",
   "scripts": {
     "generate:structure": "node cli-tools/generate-structure.js"
   },
