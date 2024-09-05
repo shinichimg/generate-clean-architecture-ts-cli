@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-
+const camelCase = require('lodash/camelCase')
 // Function to create a directory if it doesn't exist
 const createDirectory = (dirPath) => {
   if (!fs.existsSync(dirPath)) {
@@ -71,12 +71,6 @@ const formatName = (string) => {
     .split(/[\s-_]+/)
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
     .join('');
-};
-
-// Convert to camelCase
-const camelCase = (string) => {
-  const formatted = formatName(string);
-  return formatted.charAt(0).toLowerCase() + formatted.slice(1);
 };
 
 // Get the name argument from the command line
